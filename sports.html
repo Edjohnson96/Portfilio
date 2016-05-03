@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>	
+    <link type="text/css" rel="stylesheet" href="css/pure-min.css"/>
+	<link type="text/css" rel="stylesheet" href="css/grids-responsive-min.css"/>
+	<link type="text/css" rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
+	<title>Edward Johnson</title>
+
+        
+</head>
+<body>
+
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/grids-responsive-min.css">
+<!--<![endif]-->
+
+<!-- Header -->
+
+
+<div class="container">
+  <div class="nav_bar">
+    <span class="nav-btn"></span>
+       <ul class="nav_work">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Contact</a></li>
+       </ul>
+  </div>
+</div>        
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<script>
+  $("span.nav-btn").click(function (){
+
+    $('ul.nav_work').slideToggle();
+  })
+
+  $(window).resize(function (){
+    if ( $(window).width() > 1703 ){
+      $('ul.nav').removeAttr('style');
+    }
+  })
+
+      (function (window, document) {
+    var menu = document.getElementById('menu'),
+        WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
+    
+    function toggleHorizontal() {
+        [].forEach.call(
+            document.getElementById('menu').querySelectorAll('.custom-can-transform'),
+            function(el){
+                el.classList.toggle('pure-menu-horizontal');
+            }
+        );
+    };
+    
+    function toggleMenu() {
+        // set timeout so that the panel has a chance to roll up
+        // before the menu switches states
+        if (menu.classList.contains('open')) {
+            setTimeout(toggleHorizontal, 500);
+        }
+        else {
+            toggleHorizontal();
+        }
+        menu.classList.toggle('open');
+        document.getElementById('toggle').classList.toggle('x');
+    };
+    
+    function closeMenu() {
+        if (menu.classList.contains('open')) {
+            toggleMenu();
+        }
+    }
+    
+    document.getElementById('toggle').addEventListener('click', function (e) {
+        toggleMenu();
+    });
+    
+    window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
+    })(this, this.document);
+</script>
+    
+ <!-- Product Section -->
+
+    <h1 class="header">Sports Posters</h1>
+        <div class="portfolio pure-g">
+           <div class="pure-u-1">
+               <div class="product">
+                  <p class="text">We were set the task to create 3 posters, which were inspired on a sporting event. I chose the Winter X-Games 2016 in Oslo.</p>
+
+
+       <div class="portfolio pure-g">
+           <div class="pure-u-1">
+               <div class="product">
+                   <img class="pure-img" src="img/sports_1.jpg" />
+                   <h3 class="title_image">Winter X-Games</h3>
+                   <p class="text">For my first poster, as seen above. I started off by seeing what posters were already around for the X-Games. What their style was and what they have created in the past. I got the idea for this poster from a billboard i drove past. Where the information was another image ontop of a coloured background. It caught my eye straight away and so i changed the design a little bit, switched the image to the background and the colour to the foreground. I created it in photoshop using the Magic wand tool.
+                   </p>
+                   
+                   <img class="pure-img" src="img/sports_2.jpg" />
+                   <h3 class="title_image">Typography</h3>
+                   <p class="text">I got the inspiration for this poster from one of our kinetic typography project. I used typography to create the X-Games logo.
+                   </p>
+                   
+                   <img class="pure-img" src="img/sports_3.jpg" />
+                   <h3 class="title_image">Low-Poly Design</h3>
+                   <p class="text">The inspiration for this poster came from the end of year show, before hand i had an interest in low poly design however, the end of year show put into perspective how much i could do with low-poly.
+                   </p>
+                   
+                </div>
+           </div>
+       </div> 
+
+
+
+</body>
+</html>

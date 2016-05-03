@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>	
+    <link type="text/css" rel="stylesheet" href="css/pure-min.css"/>
+	<link type="text/css" rel="stylesheet" href="css/grids-responsive-min.css"/>
+	<link type="text/css" rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
+	<title>Edward Johnson</title>
+
+        
+</head>
+<body>
+
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/grids-responsive-min.css">
+<!--<![endif]-->
+
+<!-- Header -->
+
+
+<div class="container">
+  <div class="nav_bar">
+    <span class="nav-btn"></span>
+       <ul class="nav_work">
+        <li><a href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="index.html">Contact</a></li>
+       </ul>
+  </div>
+</div>        
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<script>
+  $("span.nav-btn").click(function (){
+
+    $('ul.nav_work').slideToggle();
+  })
+
+  $(window).resize(function (){
+    if ( $(window).width() > 1703 ){
+      $('ul.nav').removeAttr('style');
+    }
+  })
+
+      (function (window, document) {
+    var menu = document.getElementById('menu'),
+        WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
+    
+    function toggleHorizontal() {
+        [].forEach.call(
+            document.getElementById('menu').querySelectorAll('.custom-can-transform'),
+            function(el){
+                el.classList.toggle('pure-menu-horizontal');
+            }
+        );
+    };
+    
+    function toggleMenu() {
+        // set timeout so that the panel has a chance to roll up
+        // before the menu switches states
+        if (menu.classList.contains('open')) {
+            setTimeout(toggleHorizontal, 500);
+        }
+        else {
+            toggleHorizontal();
+        }
+        menu.classList.toggle('open');
+        document.getElementById('toggle').classList.toggle('x');
+    };
+    
+    function closeMenu() {
+        if (menu.classList.contains('open')) {
+            toggleMenu();
+        }
+    }
+    
+    document.getElementById('toggle').addEventListener('click', function (e) {
+        toggleMenu();
+    });
+    
+    window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
+    })(this, this.document);
+</script>
+    
+ <!-- Product Section -->
+
+    <h1 class="header">Mobile Device Project - Jetstream</h1>
+        <div class="portfolio pure-g">
+           <div class="pure-u-1">
+               <div class="product">
+                  <p class="text">In our second semester we were set several projects, this was our second of 3 projects. We were given a few specific contexts in which we could choose from. We chose travelling on publiuc transport. Inparticular Flying. </p>
+
+
+       <div class="portfolio pure-g">
+           <div class="pure-u-1">
+               <div class="product">
+                   <img class="pure-img" src="img/Jetstream2.jpg" />
+                   <h3 class="title_image">Jetstream</h3>
+                   <p class="text">The idea was simple, we thought that the screens onboard an aircraft were dated. With all the new technology that is out, passengers would rather use their own personal devices then look up into the isles or the back of chairs. Using NFC (Near Field Communication) we wanted to upload all of the flight data, and entertainment center onto your device, through an app in which you could download to IOS and Android.
+                   </p>
+                   
+                   <img class="pure-img" src="img/fonts.jpg" />
+                   <h3 class="title_image">Font ideas</h3>
+                   <p class="text">These were some of our inital font ideas for the main 'Jetstream' title
+                   </p>
+                   
+                   <img class="pure-img" src="img/colour.jpg" />
+                   <h3 class="title_image">Colour palettes</h3>
+                   <p class="text">We wanted to keep the main colour palette clean and simple. By doing so we thought that the over all theme to the app would look professional. Depending on which company you were flying with, would depend on the colours for the icons, we thought if each airline could make the app personal to themselves it would make for a better experience for the passengers.
+                   </p>
+                   
+                </div>
+           </div>
+       </div> 
+
+
+
+</body>
+</html>
